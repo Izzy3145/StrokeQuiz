@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Udar mózgu - quiz</string>
+    <string name="title">Rozpoznaj symptomy udaru mózgu</string>
+    <string name="question1">Co to jest udar mózgu?</string>
+    <string name="question2">Ile osób umiera z powodu udaru mózgu rocznie w Europie?</string>
+    <string name="question3">W języku angielskim funkcjonuje czteroliterowy akronim ułatwiający rozpoznanie udaru. Wpisz go tutaj.</string>
+    <string name="question4">Co oznacza litera F w angielskim akronimie?</string>
+    <string name="question5">Co oznacza litera A w angielskim akronimie?</string>
+    <string name="question6">Co oznacza litera S w angielskim akronimie?</string>
+    <string name="question7">Co oznacza litera T w angielskim akronimie?</string>
+    <string name="footer">Zapamiętaj - pomoc udzielona w ciągu trzech godzin od wystąpienia pierwszych symptomów zwiększa szanse na przeżycie i powrót do zdrowia. Pamiętaj by działać szybko (FAST)!</string>
+    <string name="q1a1">Atak serca</string>
+    <string name="q1a2">Zaburzenie czynności mózgu w wyniku zaburzenia krążenia mózgowego</string>
+    <string name="q1a3">Przepuklina</string>
+    <string name="q1a4">Krwotok</string>
+    <string name="q2a1">275,000</string>
+    <string name="q2a2">2,000,000</string>
+    <string name="q2a3">650,000</string>
+    <string name="q2a4">5,000,000</string>
+    <string name="q3answer">Wpisz angielski akronim tutaj</string>
+    <string name="q4a1">Przyspieszony oddech (fast breathing)</string>
+    <string name="q4a2">Porażenie części twarzy (face drooping)</string>
+    <string name="q4a3">Nudności (feeling sick)</string>
+    <string name="q5a1">Problem z podniesieniem ręki (arm weakness)</string>
+    <string name="q5a2">Ból nóg (achey legs)</string>
+    <string name="q5a3">Antyspołeczne zachowanie (anti-social behaviour)</string>
+    <string name="q6a1">Drganie rąk (shakey hands)</string>
+    <string name="q6a2">Senność (sleepiness)</string>
+    <string name="q6a3">Problemy z wymową (slurred speech)</string>
+    <string name="q7a1">Zadzwón pod 112 (time to call 999)</string>
+    <string name="q7a2">Zjedz ciasto (time for cake)</string>
+    <string name="q7a3">Tańcz (twist n shout)</string>
+    <string name="result">Wimiki</string>
+</resources>

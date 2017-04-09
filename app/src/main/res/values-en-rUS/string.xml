@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Stroke Quiz</string>
+    <string name="title">Know the signs of a stroke</string>
+    <string name="question1">What is a stroke?</string>
+    <string name="question2">How many people die from a stroke every year in Europe?</string>
+    <string name="question3">What is the four letter acronym for recognising someone experiencing a stoke? (Please enter just letters, no special characters)</string>
+    <string name="question4">What does the F stand for?</string>
+    <string name="question5">What does the A stand for?</string>
+    <string name="question6">What does the S stand for?</string>
+    <string name="question7">What does the T stand for?</string>
+    <string name="footer">Treatment administered within three hours of experiencing a stroke can greatly increase chances of recovery or survival, so remember to act FAST.</string>
+    <string name="q1a1">a heart attack</string>
+    <string name="q1a2">a blood clot</string>
+    <string name="q1a3">a hernia</string>
+    <string name="q1a4">a ruptured vein</string>
+    <string name="q2a1">275,000</string>
+    <string name="q2a2">2,000,000</string>
+    <string name="q2a3">650,000</string>
+    <string name="q2a4">5,000,000</string>
+    <string name="q3answer">Type four letter acronym here</string>
+    <string name="q4a1">fast breathing</string>
+    <string name="q4a2">face drooping</string>
+    <string name="q4a3">feeling sick</string>
+    <string name="q5a1">arm weakness</string>
+    <string name="q5a2">achy legs</string>
+    <string name="q5a3">anti-social behaviour</string>
+    <string name="q6a1">shakey hands</string>
+    <string name="q6a2">sleepiness</string>
+    <string name="q6a3">slurred speech</string>
+    <string name="q7a1">time to call 999</string>
+    <string name="q7a2">time for cake</string>
+    <string name="q7a3">twist n shout</string>
+    <string name="result">result</string>
+</resources>

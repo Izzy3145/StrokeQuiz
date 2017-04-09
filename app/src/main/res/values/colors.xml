@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#1C1C1C</color>
+    <color name="colorAccent">#50FFE71C</color>
+    <color name="question">#FFE71C</color>
+    <color name="option">#FFFFFF</color>
+    <color name="title">#FFE71C</color>
+    <color name="footer">#FFE71C</color>
+    <color name="title_background">#332F2E</color>
+</resources>
