@@ -3,6 +3,7 @@ package com.example.android.strokequiz;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
     }
 
     /**
@@ -41,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         } else if (question1A.isChecked() || question1B.isChecked()) {
             finalScore = finalScore + 1;
         } else {
-            finalScore = finalScore +0;
+            finalScore = finalScore + 0;
         }
 
         RadioButton questionTwo = (RadioButton) findViewById(R.id.q2a3);
