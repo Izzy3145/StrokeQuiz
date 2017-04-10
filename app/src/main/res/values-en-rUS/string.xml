@@ -31,5 +31,5 @@
     <string name="q7a1">time to call 999</string>
     <string name="q7a2">time for cake</string>
     <string name="q7a3">twist n shout</string>
-    <string name="result">result</string>
+    <string name="getResult">get result</string>
 </resources>

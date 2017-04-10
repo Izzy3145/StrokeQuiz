@@ -31,5 +31,5 @@
     <string name="q7a1">Zadzwón pod 112 (time to call 999)</string>
     <string name="q7a2">Zjedz ciasto (time for cake)</string>
     <string name="q7a3">Tańcz (twist n shout)</string>
-    <string name="result">Wimiki</string>
+    <string name="getResult">Wimiki</string>
 </resources>
