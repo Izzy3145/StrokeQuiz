@@ -9,7 +9,7 @@
     <string name="question5">What does the A stand for?</string>
     <string name="question6">What does the S stand for?</string>
     <string name="question7">What does the T stand for?</string>
-    <string name="footer">Treatment administered within three hours of experiencing a stroke can greatly increase chances of recovery or survival, so remember to act FAST.</string>
+    <string name="footer">Treatment administered within three hours of experiencing a stroke can greatly increase chances of recovery or survival, so remember to act <b>FAST</b>.</string>
     <string name="q1a1">a heart attack</string>
     <string name="q1a2">a blood clot</string>
     <string name="q1a3">a hernia</string>

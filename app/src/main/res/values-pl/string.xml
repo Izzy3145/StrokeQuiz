@@ -9,7 +9,7 @@
     <string name="question5">Co oznacza litera A w angielskim akronimie?</string>
     <string name="question6">Co oznacza litera S w angielskim akronimie?</string>
     <string name="question7">Co oznacza litera T w angielskim akronimie?</string>
-    <string name="footer">Zapamiętaj - pomoc udzielona w ciągu trzech godzin od wystąpienia pierwszych symptomów zwiększa szanse na przeżycie i powrót do zdrowia. Pamiętaj by działać szybko (FAST)!</string>
+    <string name="footer">Zapamiętaj - pomoc udzielona w ciągu trzech godzin od wystąpienia pierwszych symptomów zwiększa szanse na przeżycie i powrót do zdrowia. Pamiętaj by działać szybko <b>(FAST)</b>!</string>
     <string name="q1a1">Atak serca</string>
     <string name="q1a2">Zaburzenie czynności mózgu w wyniku zaburzenia krążenia mózgowego</string>
     <string name="q1a3">Przepuklina</string>

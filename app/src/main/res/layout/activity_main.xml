@@ -17,10 +17,10 @@
             style="@style/title"
             android:text="@string/title" />
 
-            <TextView
-                android:id="@+id/question_one"
-                style="@style/question"
-                android:text="@string/question1" />
+        <TextView
+            android:id="@+id/question_one"
+            style="@style/question"
+            android:text="@string/question1" />
 
         <LinearLayout
             style="@style/question_spacing"
@@ -69,8 +69,8 @@
             android:text="@string/question2" />
 
         <RadioGroup
-            style="@style/question_spacing"
-            android:id="@+id/question2answers">
+            android:id="@+id/question2answers"
+            style="@style/question_spacing">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -93,18 +93,18 @@
                 <RadioButton
                     android:id="@+id/q2a3"
                     style="@style/option"
-                    android:layout_toRightOf="@id/q2a1"
-                    android:layout_toEndOf="@id/q2a1"
                     android:layout_gravity="end"
+                    android:layout_toEndOf="@id/q2a1"
+                    android:layout_toRightOf="@id/q2a1"
                     android:text="@string/q2a3" />
 
                 <RadioButton
                     android:id="@+id/q2a4"
                     style="@style/option"
                     android:layout_below="@id/q2a3"
-                    android:layout_toRightOf="@id/q2a2"
-                    android:layout_toEndOf="@id/q2a2"
                     android:layout_gravity="end"
+                    android:layout_toEndOf="@id/q2a2"
+                    android:layout_toRightOf="@id/q2a2"
                     android:text="@string/q2a4" />
 
             </RelativeLayout>
@@ -204,31 +204,31 @@
             style="@style/question"
             android:text="@string/question7" />
 
-            <RadioGroup
-                style="@style/question_spacing"
-                android:orientation="vertical">
+        <RadioGroup
+            style="@style/question_spacing"
+            android:orientation="vertical">
 
-                <RadioButton
-                    android:id="@+id/q7a1"
-                    style="@style/option"
-                    android:text="@string/q7a1" />
+            <RadioButton
+                android:id="@+id/q7a1"
+                style="@style/option"
+                android:text="@string/q7a1" />
 
-                <RadioButton
-                    android:id="@+id/q7a2"
-                    style="@style/option"
-                    android:text="@string/q7a2" />
+            <RadioButton
+                android:id="@+id/q7a2"
+                style="@style/option"
+                android:text="@string/q7a2" />
 
-                <RadioButton
-                    android:id="@+id/q7a3"
-                    style="@style/option"
-                    android:text="@string/q7a3" />
-            </RadioGroup>
+            <RadioButton
+                android:id="@+id/q7a3"
+                style="@style/option"
+                android:text="@string/q7a3" />
+        </RadioGroup>
 
 
-            <Button
-                style="@style/button"
-                android:onClick="submitAnswers"
-                android:text="@string/getResult" />
+        <Button
+            style="@style/button"
+            android:onClick="submitAnswers"
+            android:text="@string/getResult" />
 
         <TextView
             style="@style/footer"

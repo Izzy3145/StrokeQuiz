@@ -1,9 +1,6 @@
 package com.example.android.strokequiz;
 
-import android.content.ComponentName;
 import android.support.v7.app.AppCompatActivity;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
@@ -18,6 +15,12 @@ import static com.example.android.strokequiz.R.string.question1;
 
 public class MainActivity extends AppCompatActivity {
     /**
+     * initialise the final score
+     */
+    private int finalScore = 0;
+    private String answerThree = "FAST";
+
+    /**
      * should add in functionality so that score refreshes to 0 upon hitting the button and before calculating new score
      *
      * @param savedInstanceState
@@ -28,12 +31,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
     }
-
-    /**
-     * initialise the final score
-     */
-    private int finalScore = 0;
-    private String answerThree = "FAST";
 
     /**
      * calculate and display score when Get Results button pressed
