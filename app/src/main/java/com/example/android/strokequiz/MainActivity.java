@@ -2,6 +2,7 @@ package com.example.android.strokequiz;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.CheckBox;
@@ -11,17 +12,24 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import static android.R.attr.name;
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.V;
 import static com.example.android.strokequiz.R.string.question1;
+import static com.example.android.strokequiz.R.string.question2;
 
 public class MainActivity extends AppCompatActivity {
     /**
-     * initialise the final score
+     * initialise the final score and member variables
      */
     private int finalScore = 0;
     private String answerThree = "FAST";
 
+    RadioButton q2answer1;
+    RadioButton q2answer2;
+    RadioButton q2answer3;
+    RadioButton q2answer4;
+    RadioGroup question2answers;
+
     /**
-     * should add in functionality so that score refreshes to 0 upon hitting the button and before calculating new score
      *
      * @param savedInstanceState
      */
@@ -30,7 +38,41 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+
+        /**
+         * make question 2 member variables so that findViewById doesnt need to be called every time question 2 is answered
+         */
+        q2answer1 = (RadioButton) findViewById(R.id.q2a1);
+        q2answer2 = (RadioButton) findViewById(R.id.q2a2);
+        q2answer3 = (RadioButton) findViewById(R.id.q2a3);
+        q2answer4 = (RadioButton) findViewById(R.id.q2a4);
+        question2answers = (RadioGroup) findViewById(R.id.question2answers);
     }
+/**
+ * define q2click method, to make sure only one radiobutton is highlighted at one time
+ */
+
+    public void answer1Click (View view) {
+        q2answer2.setChecked(false);
+        q2answer3.setChecked(false);
+        q2answer4.setChecked(false);
+    }
+    public void answer2Click (View view) {
+        q2answer1.setChecked(false);
+        q2answer3.setChecked(false);
+        q2answer4.setChecked(false);
+    }
+    public void answer3Click (View view) {
+        q2answer2.setChecked(false);
+        q2answer1.setChecked(false);
+        q2answer4.setChecked(false);
+    }
+    public void answer4Click (View view) {
+        q2answer2.setChecked(false);
+        q2answer3.setChecked(false);
+        q2answer1.setChecked(false);
+    }
+
 
     /**
      * calculate and display score when Get Results button pressed
@@ -57,32 +99,12 @@ public class MainActivity extends AppCompatActivity {
          * uncheck other radio buttons when one is selected on question 2
          */
 
-        RadioGroup question2answers = (RadioGroup) findViewById(R.id.question2answers);
-
-        RadioButton q2answer1 = (RadioButton) findViewById(R.id.q2a1);
-        boolean wrongAnswer1 = q2answer1.isChecked();
-        RadioButton q2answer2 = (RadioButton) findViewById(R.id.q2a2);
-        boolean wrongAnswer2 = q2answer2.isChecked();
-        RadioButton q2answer3 = (RadioButton) findViewById(R.id.q2a3);
-        boolean rightAnswer3 = q2answer3.isChecked();
-        RadioButton q2answer4 = (RadioButton) findViewById(R.id.q2a4);
-        boolean wrongAnswer4 = q2answer4.isChecked();
-
-        if (wrongAnswer1) {
-            question2answers.clearCheck();
-        } else if (wrongAnswer2) {
-            question2answers.clearCheck();
-        } else if (rightAnswer3) {
-            question2answers.clearCheck();
-        } else if (wrongAnswer4) {
-            question2answers.clearCheck();
-        }
 
         /**
          * question 2 score
          */
 
-        if (rightAnswer3) {
+        if (q2answer3.isChecked()) {
             finalScore = finalScore + 1;
         }
 
