@@ -234,6 +234,11 @@
             style="@style/footer"
             android:text="@string/footer" />
 
+        <Button
+            style="@style/button"
+            android:onClick="findHospital"
+            android:text="@string/findHospital" />
+
     </LinearLayout>
 
 </ScrollView>

@@ -1,5 +1,7 @@
 package com.example.android.strokequiz;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,6 +14,8 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import static android.R.attr.name;
+import static android.R.attr.x;
+import static android.R.attr.y;
 import static android.icu.lang.UCharacter.GraphemeClusterBreak.V;
 import static com.example.android.strokequiz.R.string.question1;
 import static com.example.android.strokequiz.R.string.question2;
@@ -49,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         question2answers = (RadioGroup) findViewById(R.id.question2answers);
     }
 /**
- * define q2click method, to make sure only one radiobutton is highlighted at one time
+ * define onClick methods seen in question2, to make sure only one RadioButton is highlighted at one time
  */
 
     public void answer1Click (View view) {
@@ -72,6 +76,15 @@ public class MainActivity extends AppCompatActivity {
         q2answer3.setChecked(false);
         q2answer1.setChecked(false);
     }
+
+    /**
+     * open map when button pressed
+     */
+
+public void findHospital(View view){
+    String uri = "geo:"+ 51.5 + "," + -0.12;
+    startActivity(new Intent(android.content.Intent.ACTION_VIEW, Uri.parse(uri)));
+}
 
 
     /**
