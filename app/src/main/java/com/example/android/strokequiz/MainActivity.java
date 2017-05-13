@@ -12,6 +12,8 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import static com.example.android.strokequiz.R.string.question1;
+
 
 public class MainActivity extends AppCompatActivity {
     RadioButton q2answer1;
@@ -25,18 +27,13 @@ public class MainActivity extends AppCompatActivity {
     private int finalScore;
     private String answerThree = "FAST";
 
-    /**
-     * @param savedInstanceState
-     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
-        /**
-         * make question 2 member variables so that findViewById doesnt need to be called every time question 2 is answered
-         */
+        // make question 2 member variables so that findViewById doesnt need to be called every time question 2 is answered
         q2answer1 = (RadioButton) findViewById(R.id.q2a1);
         q2answer2 = (RadioButton) findViewById(R.id.q2a2);
         q2answer3 = (RadioButton) findViewById(R.id.q2a3);
@@ -88,36 +85,30 @@ public class MainActivity extends AppCompatActivity {
     public void submitAnswers(View view) {
         finalScore = 0;
 
-        /**
-         * question 1 score
-         */
+        // question 1 score
 
-        CheckBox question1A = (CheckBox) findViewById(R.id.q1a2);
-        CheckBox question1B = (CheckBox) findViewById(R.id.q1a4);
-        if (question1A.isChecked() && question1B.isChecked()) {
+        CheckBox question1A = (CheckBox) findViewById(R.id.q1a1);
+        CheckBox question1B = (CheckBox) findViewById(R.id.q1a2);
+        CheckBox question1C = (CheckBox) findViewById(R.id.q1a3);
+        CheckBox question1D = (CheckBox) findViewById(R.id.q1a4);
+
+        if (question1B.isChecked() && question1D.isChecked() && !question1A.isChecked() && !question1C.isChecked()) {
             finalScore += 2;
-        } else if (question1A.isChecked() || question1B.isChecked()) {
+        } else if (question1B.isChecked() && !question1D.isChecked()) {
+            finalScore += 1;
+        } else if (question1D.isChecked() && !question1B.isChecked()) {
             finalScore += 1;
         } else {
             finalScore +=0;
         }
 
-        /**
-         * uncheck other radio buttons when one is selected on question 2
-         */
-
-
-        /**
-         * question 2 score
-         */
+        //question 2 score
 
         if (q2answer3.isChecked()) {
             finalScore = finalScore + 1;
         }
 
-        /**
-         * question 3 score
-         */
+        //question 3 score
 
         EditText text = (EditText) findViewById(R.id.question_three);
         String name = text.getText().toString();
@@ -125,45 +116,35 @@ public class MainActivity extends AppCompatActivity {
             finalScore = finalScore + 1;
         }
 
-        /**
-         * question 4 score
-         */
+        //question 4 score
 
         RadioButton questionFour = (RadioButton) findViewById(R.id.q4a2);
         if (questionFour.isChecked()) {
             finalScore = finalScore + 1;
         }
 
-        /**
-         * question 5 score
-         */
+        // question 5 score
 
         RadioButton questionFive = (RadioButton) findViewById(R.id.q5a1);
         if (questionFive.isChecked()) {
             finalScore = finalScore + 1;
         }
 
-        /**
-         * question 6 score
-         */
+        // question 6 score
 
         RadioButton questionSix = (RadioButton) findViewById(R.id.q6a3);
         if (questionSix.isChecked()) {
             finalScore = finalScore + 1;
         }
 
-        /**
-         * question 7 score
-         */
+        //question 7 score
 
         RadioButton questionSeven = (RadioButton) findViewById(R.id.q7a1);
         if (questionSeven.isChecked()) {
             finalScore = finalScore + 1;
         }
 
-        /**
-         *  display score when button pressed
-         */
+        // display score when button pressed
 
         Toast toast = Toast.makeText(this, "You have scored " + finalScore + " out of 8.", Toast.LENGTH_LONG);
         toast.show();
