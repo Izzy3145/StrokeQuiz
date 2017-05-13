@@ -225,8 +225,7 @@
                 style="@style/option"
                 android:text="@string/q7a3" />
         </RadioGroup>
-
-
+        
         <Button
             style="@style/button"
             android:onClick="submitAnswers"

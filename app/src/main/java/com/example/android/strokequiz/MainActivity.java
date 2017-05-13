@@ -81,7 +81,6 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(android.content.Intent.ACTION_VIEW, Uri.parse(uri)));
     }
 
-
     /**
      * calculate and display score when Get Results button pressed
      */
@@ -96,11 +95,11 @@ public class MainActivity extends AppCompatActivity {
         CheckBox question1A = (CheckBox) findViewById(R.id.q1a2);
         CheckBox question1B = (CheckBox) findViewById(R.id.q1a4);
         if (question1A.isChecked() && question1B.isChecked()) {
-            finalScore = finalScore + 2;
+            finalScore += 2;
         } else if (question1A.isChecked() || question1B.isChecked()) {
-            finalScore = finalScore + 1;
+            finalScore += 1;
         } else {
-            finalScore = finalScore + 0;
+            finalScore +=0;
         }
 
         /**
