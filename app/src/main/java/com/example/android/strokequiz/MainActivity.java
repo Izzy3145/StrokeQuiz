@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.CheckBox;
@@ -13,28 +12,20 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import static android.R.attr.name;
-import static android.R.attr.x;
-import static android.R.attr.y;
-import static android.icu.lang.UCharacter.GraphemeClusterBreak.V;
-import static com.example.android.strokequiz.R.string.question1;
-import static com.example.android.strokequiz.R.string.question2;
 
 public class MainActivity extends AppCompatActivity {
-    /**
-     * initialise the final score and member variables
-     */
-    private int finalScore = 0;
-    private String answerThree = "FAST";
-
     RadioButton q2answer1;
     RadioButton q2answer2;
     RadioButton q2answer3;
     RadioButton q2answer4;
     RadioGroup question2answers;
+    /**
+     * initialise the final score and member variables
+     */
+    private int finalScore;
+    private String answerThree = "FAST";
 
     /**
-     *
      * @param savedInstanceState
      */
     @Override
@@ -52,39 +43,43 @@ public class MainActivity extends AppCompatActivity {
         q2answer4 = (RadioButton) findViewById(R.id.q2a4);
         question2answers = (RadioGroup) findViewById(R.id.question2answers);
     }
-/**
- * define onClick methods seen in question2, to make sure only one RadioButton is highlighted at one time
- */
 
-    public void answer1Click (View view) {
+    /**
+     * define onClick methods seen in question2, to make sure only one RadioButton is highlighted at one time
+     */
+
+    public void answer1Click(View view) {
         q2answer2.setChecked(false);
         q2answer3.setChecked(false);
         q2answer4.setChecked(false);
     }
-    public void answer2Click (View view) {
+
+    public void answer2Click(View view) {
         q2answer1.setChecked(false);
         q2answer3.setChecked(false);
         q2answer4.setChecked(false);
     }
-    public void answer3Click (View view) {
+
+    public void answer3Click(View view) {
         q2answer2.setChecked(false);
         q2answer1.setChecked(false);
         q2answer4.setChecked(false);
     }
-    public void answer4Click (View view) {
+
+    public void answer4Click(View view) {
         q2answer2.setChecked(false);
         q2answer3.setChecked(false);
         q2answer1.setChecked(false);
     }
 
     /**
-     * open map when button pressed
+     * open map when second button pressed
      */
 
-public void findHospital(View view){
-    String uri = "geo:"+ 51.5 + "," + -0.12;
-    startActivity(new Intent(android.content.Intent.ACTION_VIEW, Uri.parse(uri)));
-}
+    public void findHospital(View view) {
+        String uri = "geo:" + 51.5 + "," + -0.12;
+        startActivity(new Intent(android.content.Intent.ACTION_VIEW, Uri.parse(uri)));
+    }
 
 
     /**
@@ -168,7 +163,7 @@ public void findHospital(View view){
         }
 
         /**
-         * display score when button pressed
+         *  display score when button pressed
          */
 
         Toast toast = Toast.makeText(this, "You have scored " + finalScore + " out of 8.", Toast.LENGTH_LONG);
