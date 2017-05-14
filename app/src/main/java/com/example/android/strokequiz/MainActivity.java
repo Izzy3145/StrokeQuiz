@@ -12,6 +12,8 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import static com.example.android.strokequiz.R.string.question1;
+
 
 public class MainActivity extends AppCompatActivity {
     RadioButton q2answer1;
@@ -92,14 +94,15 @@ public class MainActivity extends AppCompatActivity {
          * question 1 score
          */
 
-        CheckBox question1A = (CheckBox) findViewById(R.id.q1a2);
-        CheckBox question1B = (CheckBox) findViewById(R.id.q1a4);
-        if (question1A.isChecked() && question1B.isChecked()) {
+        CheckBox question1A = (CheckBox) findViewById(R.id.q1a1);
+        CheckBox question1B = (CheckBox) findViewById(R.id.q1a2);
+        CheckBox question1C = (CheckBox) findViewById(R.id.q1a3);
+        CheckBox question1D = (CheckBox) findViewById(R.id.q1a4);
+
+        if (question1B.isChecked() && question1D.isChecked() && !question1A.isChecked() && !question1C.isChecked()) {
             finalScore += 2;
-        } else if (question1A.isChecked() || question1B.isChecked()) {
-            finalScore += 1;
-        } else {
-            finalScore +=0;
+        }else{
+            finalScore += 0;
         }
 
         /**
