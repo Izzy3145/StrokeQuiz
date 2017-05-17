@@ -100,15 +100,10 @@ public class MainActivity extends AppCompatActivity {
         CheckBox question1D = (CheckBox) findViewById(R.id.q1a4);
 
         if (question1B.isChecked() && question1D.isChecked() && !question1A.isChecked() && !question1C.isChecked()) {
-            finalScore += 2;
-        }else{
+            finalScore += 1;
+        } else {
             finalScore += 0;
         }
-
-        /**
-         * uncheck other radio buttons when one is selected on question 2
-         */
-
 
         /**
          * question 2 score
@@ -168,7 +163,7 @@ public class MainActivity extends AppCompatActivity {
          *  display score when button pressed
          */
 
-        Toast toast = Toast.makeText(this, "You have scored " + finalScore + " out of 8.", Toast.LENGTH_LONG);
+        Toast toast = Toast.makeText(this, "You have scored " + finalScore + " out of 7.", Toast.LENGTH_LONG);
         toast.show();
     }
 }
